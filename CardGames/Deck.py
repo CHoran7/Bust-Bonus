@@ -29,7 +29,25 @@ class Deck:
 
     def drawCard(self):
         return self.cards.pop()
+   
+class Game:
+    def __init__(self, deck):
+        self.stack1 = []
+        self.stack2 = []
+        self.stack3 = []
+        self.stack4 = []
+        self.stack5 = []
+        self.stack6 = []
+        self.stack7 = []
+        self.table = []
+        self.build()
 
+    def build(self):
+        firstCard = deck.drawCard()
+        self.stack1.append(firstCard)
+    
 deck = Deck()
 deck.shuffle()
 deck.show()
+game = Game(deck)
+game.build()
